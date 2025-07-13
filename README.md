@@ -24,7 +24,7 @@ multi_tool_agent/
 ## Requirements
 
 - Python 3.9+
-- Google ADK (https://github.com/google/adk)
+- Google ADK ([https://github.com/google/adk](https://google.github.io/adk-docs/))
 - (Optional) Go (required only for some ADK features, not for this agent)
 
 ## Setup
