@@ -72,7 +72,7 @@ multi_tool_agent/
 
 ## License
 
-MIT (or your preferred license)
+MIT
 
 ## Next Features
 
