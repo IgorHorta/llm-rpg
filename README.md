@@ -65,6 +65,27 @@ multi_tool_agent/
    - The AI party member will act independently, making decisions as your in-game friend.
    - Dice rolls and health are managed by the agents.
 
+## Docker & Fly.io
+
+The app can be run in Docker and deployed to [Fly.io](https://fly.io).
+
+1. **Environment:** Copy `.env.example` to `.env` and set `GOOGLE_API_KEY` (and optionally `GOOGLE_GENAI_USE_VERTEXAI`).
+
+2. **Build and run locally:**
+   ```bash
+   docker build -t llm-rpg .
+   docker run -p 8080:8080 --env-file .env llm-rpg
+   ```
+   Then open http://localhost:8080
+
+3. **Deploy to Fly.io:**
+   ```bash
+   fly launch   # first time: creates app and sets region
+   fly secrets set GOOGLE_API_KEY=your_google_api_key
+   fly deploy
+   ```
+   Or with an existing `fly.toml`: `fly deploy` (set secrets first with `fly secrets set`).
+
 ## Customization
 
 - Edit `multi_tool_agent/agent.py` to add new rooms, items, or mechanics.
