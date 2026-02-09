@@ -48,7 +48,7 @@ def roll_dice() -> dict:
 # --- AI Player Agent ---
 AIPlayer = Agent(
     name="AIPlayer",
-    model="gemini-3.0-flash",
+    model="gemini-3-flash-preview",
     description="AI party member who chooses actions based on the current room, inventory, and life points.",
     instruction=(
         "You are the AI party member in a text RPG. Each turn, decide what action to take based on your character's personality, the current room, your inventory, and your life points. Respond with the action you want to take."
@@ -73,7 +73,7 @@ def get_ai_action(room_description: str, inventory: List[str], life: int) -> dic
 # --- GameMaster Agent ---
 GameMaster = Agent(
     name="GameMaster",
-    model="gemini-3.0-flash",
+    model="gemini-3-flash-preview",
     description="RPG Game Master: narrates the world, processes player and AI actions, and uses dice rolls for random events.",
     instruction=(
         "You are the Game Master for a text-based RPG. Narrate the world, process both the human and AI player's actions, and use the roll_dice tool for any random or chance-based events. "
